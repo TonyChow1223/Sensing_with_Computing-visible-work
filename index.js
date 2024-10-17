@@ -1,7 +1,6 @@
 option1 = {
     title: {
-        text: 'Senputing',
-        subtext: 'Using pixel/s as speed metric',
+        text: 'Using pixel/s as speed metric',
         left: 'center',
         top: '0%'
     },
@@ -186,8 +185,7 @@ option1 = {
 
 option2 = {
     title: {
-        text: 'Senputing',
-        subtext: 'Using OPS as speed metric',
+        text: 'Using OPS as speed metric',
         left: 'center',
         top: '0%'
     },
