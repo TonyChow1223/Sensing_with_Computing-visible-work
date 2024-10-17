@@ -93,14 +93,14 @@ option1 = {
             symbolSize: 13,
             data: [
                 [16.43, 1939.456, 0.00847, "sample4", "https://ieeexplore.ieee.org/document/9449866"],
-                [620, 76.8, 8.073, "sample26"],
-                [29.9, 491.52, 0.0608, "sample28"],
-                [52500, 7680, 6.836, "sample44"],
-                [229, 2313.13, 0.099, "sample46"],
-                [620, 76.8, 8.1, "sample53"],
-                [107000, 9727, 11, "sample64"],
-                [760000, 62208, 12.21, "sample65"],
-                [188388, 71089.92, 2.65, "sample67"]
+                [620, 76.8, 8.073, "sample26","https://ieeexplore.ieee.org/document/8197364"],
+                [29.9, 491.52, 0.0608, "sample28","https://ieeexplore.ieee.org/document/6757366"],
+                [52500, 7680, 6.836, "sample44","https://ieeexplore.ieee.org/document/9119774"],
+                [229, 2313.13, 0.099, "sample46","https://ieeexplore.ieee.org/document/8844721"],
+                [620, 76.8, 8.1, "sample53","https://ieeexplore.ieee.org/document/7870354"],
+                [107000, 9727, 11, "sample64","https://ieeexplore.ieee.org/document/10143350"],
+                [760000, 62208, 12.21, "sample65","https://ieeexplore.ieee.org/document/8598832"],
+                [188388, 71089.92, 2.65, "sample67","https://ieeexplore.ieee.org/document/8662306"]
             ],
             symbol: 'circle',
             visible: true
@@ -114,24 +114,24 @@ option1 = {
             },
             symbol: 'triangle',
             data: [
-                [134.5, 3969, 0.0338, "sample13"],
-                [71.2, 1474.56, 0.0483, "sample14"],
-                [77, 7864.32, 0.0098, "sample15"],
-                [1400, 1545.87, 0.9056, "sample17"],
-                [6200, 12288, 0.5046, "sample18"],
-                [5300, 7864.32, 0.6739, "sample42"],
-                [205000, 165888, 1.23, "sample56"],
-                [111, 3276.8, 0.034, "sample58"],
-                [5.7, 96, 0.059, "sample59"],
-                [34400, 988.2, 34, "sample61"],
-                [5750, 7864.32, 0.731, "sample62"],
-                [34.4, 8847.36, 0.00388, "sample63"],
-                [598600, 540000, 1.11, "sample69"],
-                [612000, 1470873, 0.42, "sample70"],
-                [75000, 20833, 3.6, "sample71"],
-                [185000, 242457, 0.76, "sample72"],
-                [31521, 1106, 28.5, "sample74"],
-                [8560, 9216, 0.929, "sample75"]
+                [134.5, 3969, 0.0338, "sample13","https://ieeexplore.ieee.org/document/10164007"],
+                [71.2, 1474.56, 0.0483, "sample14","https://ieeexplore.ieee.org/document/9425497"],
+                [77, 7864.32, 0.0098, "sample15","https://ieeexplore.ieee.org/document/9250500"],
+                [1400, 1545.87, 0.9056, "sample17","https://ieeexplore.ieee.org/document/7551398"],
+                [6200, 12288, 0.5046, "sample18","https://ieeexplore.ieee.org/document/10185291"],
+                [5300, 7864.32, 0.6739, "sample42","https://ieeexplore.ieee.org/document/9371913"],
+                [205000, 165888, 1.23, "sample56","https://ieeexplore.ieee.org/document/8662441"],
+                [111, 3276.8, 0.034, "sample58","https://ieeexplore.ieee.org/document/9365771"],
+                [5.7, 96, 0.059, "sample59","https://ieeexplore.ieee.org/document/9162854"],
+                [34400, 988.2, 34, "sample61","https://ieeexplore.ieee.org/document/8844261"],
+                [5750, 7864.32, 0.731, "sample62","https://ieeexplore.ieee.org/document/9684032"],
+                [34.4, 8847.36, 0.00388, "sample63","https://ieeexplore.ieee.org/document/7403939"],
+                [598600, 540000, 1.11, "sample69","https://ieeexplore.ieee.org/document/7870268"],
+                [612000, 1470873, 0.42, "sample70","https://ieeexplore.ieee.org/document/9180435"],
+                [75000, 20833, 3.6, "sample71","https://ieeexplore.ieee.org/document/6362241"],
+                [185000, 242457, 0.76, "sample72","https://ieeexplore.ieee.org/document/6487825"],
+                [31521, 1106, 28.5, "sample74","https://ieeexplore.ieee.org/document/9010705"],
+                [8560, 9216, 0.929, "sample75","https://ieeexplore.ieee.org/document/10067708"]
             ],
             symbol: 'triangle',
             visible: true
@@ -145,9 +145,9 @@ option1 = {
             },
             symbol: 'square',
             data: [
-                [1, 4.096, 0.2441, "sample24"],
-                [17.4, 245.76, 0.0708, "sample25"],
-                [23000, 5068.8, 4.5, "sample45"]
+                [1, 4.096, 0.2441, "sample24","https://dl.acm.org/doi/abs/10.1145/3489517.3530554"],
+                [17.4, 245.76, 0.0708, "sample25","https://ieeexplore.ieee.org/document/9789972"],
+                [23000, 5068.8, 4.5, "sample45","https://ieeexplore.ieee.org/document/7859309"]
             ],
             visible: true
         },
