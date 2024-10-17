@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+  <meta charset="UTF-8">
+  <title>ECharts</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body style="height: 100%; margin: 0">
+<div id="main" style="width: 100%; height: 100%"></div>
+
+<script>
+  // Fetch JSON data from remote URL
+  fetch('https://raw.githubusercontent.com/TonyChow1223/test_data/refs/heads/main/data.json')
+          .then(response => response.json())
+          .then(data => {
+            // Filter data based on types
+            let nearSensorData = data.filter(item => item.type === 'NearSensor');
+            let inSensorData = data.filter(item => item.type === 'InSensor');
+            let unknownData = data.filter(item => item.type === 'Unknown');
+
+            let option = {
+              title: {
+                text: 'Senputing',
+                subtext: 'Using pixel/s as speed metric',
+                left: 'center',
+                top: '5%',
+              },
+              grid: {
+                left: '3%',
+                right: '7%',
+                bottom: '7%',
+                containLabel: true,
+              },
+              tooltip: {
+                showDelay: 0,
+                formatter: function (params) {
+                  return (
+                          params.seriesName +
+                          ' :<br/>' +
+                          params.value[1] + ' kpixel/s<br/>' +
+                          params.value[0] + ' uW<br/>' +
+                          'Efficiency: ' + params.value[2] + ' nJ/pixel<br/>' +
+                          'Sample: ' + params.value[3]
+                  );
+                },
+                axisPointer: {
+                  show: true,
+                  type: 'cross',
+                  lineStyle: {
+                    type: 'dashed',
+                    width: 1,
+                  },
+                },
+              },
+              xAxis: {
+                type: 'log',
+                name: 'Power (uW)',
+                min: 10,
+                max: 1000000,
+                axisLabel: {
+                  formatter: '{value}',
+                },
+              },
+              yAxis: {
+                type: 'log',
+                name: 'Speed (kpixel/s)',
+                min: 10,
+                max: 100000,
+              },
+              series: [
+                {
+                  name: 'NearSensor',
+                  type: 'scatter',
+                  symbol: 'circle',
+                  symbolSize: 13,
+                  data: nearSensorData.map(item => [item.power, item.speed, item.efficiency, item.sample]),
+                  itemStyle: {
+                    color: 'red',
+                  },
+                },
+                {
+                  name: 'InSensor',
+                  type: 'scatter',
+                  symbol: 'triangle',
+                  symbolSize: 13,
+                  data: inSensorData.map(item => [item.power, item.speed, item.efficiency, item.sample]),
+                  itemStyle: {
+                    color: 'green',
+                  },
+                },
+                {
+                  name: 'Unknown',
+                  type: 'scatter',
+                  symbol: 'rect',
+                  symbolSize: 13,
+                  data: unknownData.map(item => [item.power, item.speed, item.efficiency, item.sample]),
+                  itemStyle: {
+                    color: 'black',
+                  },
+                },
+              ],
+            };
+
+            // Initialize ECharts instance
+            let chart = echarts.init(document.getElementById('main'));
+            chart.setOption(option);
+          })
+          .catch(error => console.error('Error fetching JSON data:', error));
+</script>
+</body>
+</html>

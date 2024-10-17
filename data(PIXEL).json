@@ -1,0 +1,245 @@
+{
+  "data": [
+    {
+      "sample": 4,
+      "architecture": "NearSensor",
+      "energy_efficiency": "0.00847",
+      "power": "16.43",
+      "speed_throughput": "1939.456",
+      "source": "https://ieeexplore.ieee.org/document/9449866"
+    },
+    {
+      "sample": 13,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.0338",
+      "power": "134.5",
+      "speed_throughput": "3969",
+      "source": "https://ieeexplore.ieee.org/document/10164007"
+    },
+    {
+      "sample": 14,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.0483",
+      "power": "71.2",
+      "speed_throughput": "1474.56",
+      "source": "https://ieeexplore.ieee.org/document/9425497"
+    },
+    {
+      "sample": 15,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.0098",
+      "power": "77",
+      "speed_throughput": "7864.32",
+      "source": "https://ieeexplore.ieee.org/document/9250500"
+    },
+    {
+      "sample": 17,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.9056",
+      "power": "1400",
+      "speed_throughput": "1545.87",
+      "source": "https://ieeexplore.ieee.org/document/7551398"
+    },
+    {
+      "sample": 18,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.5046",
+      "power": "6200",
+      "speed_throughput": "12288",
+      "source": "https://ieeexplore.ieee.org/document/10185291"
+    },
+    {
+      "sample": 24,
+      "architecture": "Unknown",
+      "energy_efficiency": "0.2441",
+      "power": "1",
+      "speed_throughput": "4.096",
+      "source": "https://dl.acm.org/doi/abs/10.1145/3489517.3530554"
+    },
+    {
+      "sample": 25,
+      "architecture": "Unknown",
+      "energy_efficiency": "0.0708",
+      "power": "17.4",
+      "speed_throughput": "245.76",
+      "source": "https://ieeexplore.ieee.org/document/9789972"
+    },
+    {
+      "sample": 26,
+      "architecture": "NearSensor",
+      "energy_efficiency": "8.073",
+      "power": "620",
+      "speed_throughput": "76.8",
+      "source": "https://ieeexplore.ieee.org/document/8197364"
+    },
+    {
+      "sample": 28,
+      "architecture": "NearSensor",
+      "energy_efficiency": "0.0608",
+      "power": "29.9",
+      "speed_throughput": "491.52",
+      "source": "https://ieeexplore.ieee.org/document/6757366"
+    },
+    {
+      "sample": 42,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.6739",
+      "power": "5300",
+      "speed_throughput": "7864.32",
+      "source": "https://ieeexplore.ieee.org/document/9371913"
+    },
+    {
+      "sample": 44,
+      "architecture": "NearSensor",
+      "energy_efficiency": "6.836",
+      "power": "52500",
+      "speed_throughput": "7680",
+      "source": "https://ieeexplore.ieee.org/document/9119774"
+    },
+    {
+      "sample": 45,
+      "architecture": "Unknown",
+      "energy_efficiency": "4.5",
+      "power": "23000",
+      "speed_throughput": "5068.8",
+      "source": "https://ieeexplore.ieee.org/document/7859309"
+    },
+    {
+      "sample": 46,
+      "architecture": "NearSensor",
+      "energy_efficiency": "0.099",
+      "power": "229",
+      "speed_throughput": "2313.13",
+      "source": "https://ieeexplore.ieee.org/document/8844721"
+    },
+    {
+      "sample": 53,
+      "architecture": "NearSensor",
+      "energy_efficiency": "8.1",
+      "power": "620",
+      "speed_throughput": "76.8",
+      "source": "https://ieeexplore.ieee.org/document/7870354"
+    },
+    {
+      "sample": 56,
+      "architecture": "InSensor",
+      "energy_efficiency": "1.23",
+      "power": "205000",
+      "speed_throughput": "165888",
+      "source": "https://ieeexplore.ieee.org/document/8662441"
+    },
+    {
+      "sample": 58,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.034",
+      "power": "111",
+      "speed_throughput": "3276.8",
+      "source": "https://ieeexplore.ieee.org/document/9365771"
+    },
+    {
+      "sample": 59,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.059",
+      "power": "5.7",
+      "speed_throughput": "96",
+      "source": "https://ieeexplore.ieee.org/document/9162854"
+    },
+    {
+      "sample": 61,
+      "architecture": "InSensor",
+      "energy_efficiency": "34",
+      "power": "34400",
+      "speed_throughput": "988.2",
+      "source": "https://ieeexplore.ieee.org/document/8844261"
+    },
+    {
+      "sample": 62,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.731",
+      "power": "5750",
+      "speed_throughput": "7864.32",
+      "source": "https://ieeexplore.ieee.org/document/9684032"
+    },
+    {
+      "sample": 63,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.00388",
+      "power": "34.4",
+      "speed_throughput": "8847.36",
+      "source": "https://ieeexplore.ieee.org/document/7403939"
+    },
+    {
+      "sample": 64,
+      "architecture": "NearSensor",
+      "energy_efficiency": "11",
+      "power": "107000",
+      "speed_throughput": "9727",
+      "source": "https://ieeexplore.ieee.org/document/10143350"
+    },
+    {
+      "sample": 65,
+      "architecture": "NearSensor",
+      "energy_efficiency": "12.21",
+      "power": "760000",
+      "speed_throughput": "62208",
+      "source": "https://ieeexplore.ieee.org/document/8598832"
+    },
+    {
+      "sample": 67,
+      "architecture": "NearSensor",
+      "energy_efficiency": "2.65",
+      "power": "188388",
+      "speed_throughput": "71089.92",
+      "source": "https://ieeexplore.ieee.org/document/8662306"
+    },
+    {
+      "sample": 69,
+      "architecture": "InSensor",
+      "energy_efficiency": "1.11",
+      "power": "598600",
+      "speed_throughput": "540000",
+      "source": "https://ieeexplore.ieee.org/document/7870268"
+    },
+    {
+      "sample": 70,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.42",
+      "power": "612000",
+      "speed_throughput": "1470873",
+      "source": "https://ieeexplore.ieee.org/document/9180435"
+    },
+    {
+      "sample": 71,
+      "architecture": "InSensor",
+      "energy_efficiency": "3.6",
+      "power": "75000",
+      "speed_throughput": "20833",
+      "source": "https://ieeexplore.ieee.org/document/6362241"
+    },
+    {
+      "sample": 72,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.76",
+      "power": "185000",
+      "speed_throughput": "242457",
+      "source": "https://ieeexplore.ieee.org/document/6487825"
+    },
+    {
+      "sample": 74,
+      "architecture": "InSensor",
+      "energy_efficiency": "28.5",
+      "power": "31521",
+      "speed_throughput": "1106",
+      "source": "https://ieeexplore.ieee.org/document/7158312"
+    },
+    {
+      "sample": 75,
+      "architecture": "InSensor",
+      "energy_efficiency": "0.929",
+      "power": "8560",
+      "speed_throughput": "9216",
+      "source": "https://ieeexplore.ieee.org/document/7881524"
+    }
+  ]
+
+}

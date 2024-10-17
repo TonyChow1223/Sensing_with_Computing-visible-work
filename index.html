@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>你的科研题目</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+</head>
+<style>
+    .graph {
+        width: 100%;
+        height: 500px;
+        margin-top: 40px;
+    }
+
+    .title {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .tag {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+</style>
+<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css">
+<body style="padding: 20px">
+<div class="mdui-container">
+<!--    <h1>-->
+<!--        测试数据平台-->
+<!--    </h1>-->
+
+<!--    <h4 id="loading" style="color: cornflowerblue">加载数据中...</h4>-->
+<!--    <pre id="data">-->
+<!--</pre>-->
+
+<!--    <button onclick="parseData()">-->
+<!--        开始处理数据-->
+<!--    </button>-->
+
+    <div id="header" style="text-align: center">
+        <h2 class="title">
+            这是你的研究课题标题
+        </h2>
+        <h4>
+            作者1 作者2 （table）
+        </h4>
+    </div>
+
+    <hr />
+
+    <div class="mdui-row">
+        <div class="mdui-col-md-6 mdui-col-xs-12">
+            <div id="graph-1" class="graph"></div>
+        </div>
+        <div class="mdui-col-md-6 mdui-col-xs-12">
+            <div id="graph-2" class="graph"></div>
+        </div>
+    </div>
+</div>
+
+
+<footer style="margin-top: 20px;padding: 5px;">
+    <hr />
+    <div class="tag">
+        <img src="https://v-co-ap.vercel.app/images/arxiv.png" width="20px" />
+        Arxiv
+    </div>
+</footer>
+
+<script src="./index.js"></script>
+<script>
+    const graph1 = echarts.init(document.getElementById('graph-1'));
+    graph1.setOption(option1);
+    graph1.on('click', function (params) {
+        const dataPoint = params.data;
+        if (dataPoint && dataPoint[4]) {
+            window.open(dataPoint[4]);
+        }
+    });
+
+
+    const graph2 = echarts.init(document.getElementById('graph-2'));
+    graph2.setOption(option2);
+    graph2.on('click', function (params) {
+        // 检查点击的数据是否有链接
+        const dataPoint = params.data;
+        if (dataPoint && dataPoint[4]) {
+            // 跳转到指定链接
+            window.open(dataPoint[4]);
+        }
+    });
+
+
+    window.onresize = function() {
+        graph1.resize();
+        graph2.resize();
+    };
+
+</script>
+<script>
+    let loading = true;
+    let data = []
+    fetch("https://raw.githubusercontent.com/TonyChow1223/test_data/e48bac4c50d508a5feb8c09388ef435c8c2206dd/data.json").then(res => res.json()).then((res) => {
+        console.log(res)
+        loading = false;
+
+        const elementLoading = document.getElementById("loading");
+        elementLoading.innerText = "√ 加载成功"
+
+        // const dataElement = document.getElementById("data");
+        // const tempData = JSON.stringify(res.data[2])
+        // dataElement.innerHTML = tempData;
+
+        data = res.data
+    })
+
+    const parseData = () => {
+        const nearSensorData = data.filter(item => item.architecture === 'NearSensor');
+        const inSensorData = data.filter(item => item.architecture === 'InSensor');
+        const unKnown = data.filter(item => item.architecture === 'Unknown');
+
+        console.group("开始处理数据")
+        console.log('NearSensor 数据:', nearSensorData);
+        console.log('InSensor 数据:', inSensorData);
+        console.log('Unknown 数据:', unKnown);
+
+        // 获取 NearSensor、InSensor 和 Unknown 的最终数组
+        const nearSensorValues = extractNumericValues(nearSensorData);
+        const inSensorValues = extractNumericValues(inSensorData);
+        const unknownValues = extractNumericValues(unKnown);
+
+        console.log('NearSensor 数值数组:', nearSensorValues);
+        console.log('InSensor 数值数组:', inSensorValues);
+        console.log('Unknown 数值数组:', unknownValues);
+
+        console.groupEnd();
+    }
+
+    function extractNumericValues(sensorData) {
+        return sensorData.map(item => {
+            // 提取 sample、power、speed_throughput 和 source
+            const powerValue = parseFloat(item.power); // 提取并转换 power 值
+            const speedValue = parseFloat(item.speed_throughput); // 提取并转换 speed_throughput 值
+            const sampleValue = `sample${item.sample}`; // 生成样本序号
+            const sourceValue = item.source ? `source${item.source}` : null; // 提取 source 链接并格式化, 如果没有则为 null
+            return [powerValue, speedValue, sampleValue, sourceValue]; // 返回包含四个值的数组
+        });
+    }
+
+
+</script>
+</body>
+</html>

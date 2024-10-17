@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1231231</title>
+</head>
+<body style="padding: 20px">
+
+<h1>
+    测试数据平台
+</h1>
+
+<h4 id="loading" style="color: cornflowerblue">加载数据中...</h4>
+<pre id="data">
+</pre>
+
+<button onclick="parseData()">
+    开始处理数据
+</button>
+
+<script src="./index.js"></script>
+<script>
+    let loading = true;
+    let data = []
+    fetch("https://raw.githubusercontent.com/TonyChow1223/test_data/refs/heads/main/data(TOPS).json").then(res=>res.json()).then((res)=>{
+        console.log(res)
+        loading = false;
+
+        const elementLoading = document.getElementById("loading");
+        elementLoading.innerText = "√ 加载成功"
+
+        // const dataElement = document.getElementById("data");
+        // const tempData = JSON.stringify(res.data[2])
+        // dataElement.innerHTML = tempData;
+
+        data = res.data
+    })
+
+    const parseData = () => {
+        const nearSensorData = data.filter(item => item.architecture === 'NearSensor');
+        const inSensorData = data.filter(item => item.architecture === 'InSensor');
+        const unKnown = data.filter(item => item.architecture === 'Unknown');
+
+        console.group("开始处理数据")
+        console.log('NearSensor 数据:', nearSensorData);
+        console.log('InSensor 数据:', inSensorData);
+        console.log('Unknown 数据:', unKnown);
+
+        // 获取 NearSensor、InSensor 和 Unknown 的最终数组
+        const nearSensorValues = extractNumericValues(nearSensorData);
+        const inSensorValues = extractNumericValues(inSensorData);
+        const unknownValues = extractNumericValues(unKnown);
+
+        console.log('NearSensor 数值数组:', nearSensorValues);
+        console.log('InSensor 数值数组:', inSensorValues);
+        console.log('Unknown 数值数组:', unknownValues);
+
+        console.groupEnd();
+    }
+
+    function extractNumericValues(sensorData) {
+        return sensorData.map(item => {
+            // 提取 sample、power、speed_throughput 和 source
+            const powerValue = parseFloat(item.power); // 提取并转换 power 值
+            const speedValue = parseFloat(item.speed_throughput); // 提取并转换 speed_throughput 值
+            const EffValue = parseFloat(item.energy_efficiency);
+            const sampleValue = `sample${item.sample}`; // 生成样本序号
+            // const sourceValue = item.source ? `source${item.source}` : null; // 提取 source 链接并格式化, 如果没有则为 null
+            return [powerValue, speedValue, EffValue,sampleValue]; // 返回包含四个值的数组
+        });
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
