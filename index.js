@@ -292,15 +292,19 @@ option2 = {
             type: 'scatter',
             symbolSize: 13,
             data: [
-                [881.7, 51200, 58, "sample7"],
-                [1800, 981.72, 0.5454, "sample8"],
-                [1800, 981.7, 0.5454, "sample21"],
-                [94500, 22551500, 27, "sample22"],
-                [32000, 140000, 4.375, "sample27"],
-                [10.17, 92.14, 9.06, "sample43"],
-                [900, 478800, 532, "sample47"],
-                [170, 255, 1.5, "sample54"],
-                [200, 2660, 13.3, "sample66"]
+                [2.17, 24.93, 11.49, "sample1", "https://ieeexplore.ieee.org/document/9712591"],
+                [0.147, 2.543, 17.3, "sample2", "https://ieeexplore.ieee.org/document/9464962"],
+                [2.14, 14.74, 6.89, "sample3", "https://ieeexplore.ieee.org/document/9634759"],
+                [12.16, 16.05, 1.32, "sample5", "https://ieeexplore.ieee.org/document/9164893"],
+                [4.45, 51.13, 11.49, "sample6", "https://ieeexplore.ieee.org/document/9218622"],
+                [60800, 4.55e9, 7.48e4, "sample9", "https://www.nature.com/articles/s41586-023-06558-8#Abs1"],
+                [1230000, 655000, 0.5325, "sample12", "https://ieeexplore.ieee.org/document/6578654"],
+                [26200, 20000, 0.7634, "sample16", "https://ieeexplore.ieee.org/document/4982878"],
+                [5.9, 48.56, 8.23, "sample19", "https://ieeexplore.ieee.org/document/9401338"],
+                [6500, 65000, 10, "sample29", "https://ieeexplore.ieee.org/document/7870353"],
+                [379100, 1210000, 3.19, "sample55", "https://ieeexplore.ieee.org/document/9365965"],
+                [53.2, 193.9, 3.6, "sample57", "https://ieeexplore.ieee.org/document/9365839"],
+                [1230000, 658000, 0.535, "sample73", "https://ieeexplore.ieee.org/document/9010705"]
             ],
             symbol: 'circle',
             visible: true
