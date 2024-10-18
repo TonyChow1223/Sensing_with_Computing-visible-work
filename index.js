@@ -292,6 +292,29 @@ option2 = {
             type: 'scatter',
             symbolSize: 13,
             data: [
+                [881.7, 51200, 58, "sample7", "https://ieeexplore.ieee.org/document/9061142"],
+                [1800, 981.72, 0.5454, "sample8", "https://ieeexplore.ieee.org/document/8835152"],
+                [1800, 981.7, 0.5454, "sample21", "https://ieeexplore.ieee.org/document/8839347"],
+                [94500, 22551500, 27, "sample22", "https://ieeexplore.ieee.org/document/8836114"],
+                [32000, 140000, 4.375, "sample27", "https://ieeexplore.ieee.org/document/7870271"],
+                [10.17, 92.14, 9.06, "sample43", "https://ieeexplore.ieee.org/document/8702698"],
+                [900, 478800, 532, "sample47", "https://ieeexplore.ieee.org/document/8480105"],
+                [170, 255, 1.5, "sample54", "https://ieeexplore.ieee.org/document/9293122"],
+                [200, 2660, 13.3, "sample66", "https://ieeexplore.ieee.org/document/8502266"]
+            ],
+
+            symbol: 'circle',
+            visible: true
+        },
+        {
+            name: 'InSensor',
+            type: 'scatter',
+            symbolSize: 13,
+            itemStyle: {
+                color: 'green'
+            },
+            symbol: 'triangle',
+            data: [
                 [2.17, 24.93, 11.49, "sample1", "https://ieeexplore.ieee.org/document/9712591"],
                 [0.147, 2.543, 17.3, "sample2", "https://ieeexplore.ieee.org/document/9464962"],
                 [2.14, 14.74, 6.89, "sample3", "https://ieeexplore.ieee.org/document/9634759"],
@@ -306,32 +329,7 @@ option2 = {
                 [53.2, 193.9, 3.6, "sample57", "https://ieeexplore.ieee.org/document/9365839"],
                 [1230000, 658000, 0.535, "sample73", "https://ieeexplore.ieee.org/document/9010705"]
             ],
-            symbol: 'circle',
-            visible: true
-        },
-        {
-            name: 'InSensor',
-            type: 'scatter',
-            symbolSize: 13,
-            itemStyle: {
-                color: 'green'
-            },
-            symbol: 'triangle',
-            data: [
-                [2.17, 24.93, 11.49, "sample1"],
-                [0.147, 2.543, 17.3, "sample2"],
-                [2.14, 14.74, 6.89, "sample3"],
-                [12.16, 16.05, 1.32, "sample5"],
-                [4.45, 51.13, 11.49, "sample6"],
-                [60800, 4550000000, 74800, "sample9"],
-                [1230000, 655000, 0.5325, "sample12"],
-                [26200, 20000, 0.7634, "sample16"],
-                [5.9, 48.56, 8.23, "sample19"],
-                [6500, 65000, 10, "sample29"],
-                [379100, 1210000, 3.19, "sample55"],
-                [53.2, 193.9, 3.6, "sample57"],
-                [1230000, 658000, 0.535, "sample73"]
-            ],
+
             symbol: 'triangle',
             visible: true
         },
@@ -344,7 +342,7 @@ option2 = {
             },
             symbol: 'square',
             data: [
-                [225000, 1600000, 7.1, "sample68"]
+                [225000, 1600000, 7.1, "sample68", "https://ieeexplore.ieee.org/document/10213232"]
             ],
             visible: true
         },
