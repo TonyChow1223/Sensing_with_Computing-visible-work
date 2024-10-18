@@ -340,7 +340,7 @@ option2 = {
             },
             symbol: 'square',
             data: [
-                [225000, 1600000, 7.1, "sample68"]
+                [225000, 1600000, 7.1, "sample68", "https://ieeexplore.ieee.org/document/10213232"]
             ],
             visible: true
         },
