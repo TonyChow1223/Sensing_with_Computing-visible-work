@@ -254,11 +254,13 @@ option2 = {
         axisLabel: {
             formatter: function (value) {
                 if (value >= 1000000) {
-                    return (value / 1000000).toFixed(1) + ' W'; // Convert to W
+                    return (value / 1000000).toFixed(0) + ' W'; // Convert to W
                 } else if (value >= 1000) {
-                    return (value / 1000).toFixed(1) + ' mW'; // Convert to mW
+                    return (value / 1000).toFixed(0) + ' mW'; // Convert to mW
+                } else if (value <= 0.1) {
+                    return (value ).toFixed(1) + ' uW'; // Show 0.1 uW
                 }
-                return value.toFixed(1) + ' uW'; // Show as uW
+                return value.toFixed(0) + ' uW'; // Show as uW
             }
         }
     },
@@ -270,12 +272,12 @@ option2 = {
         max: 5000000000,
         axisLabel: {
             formatter: function (value) {
-                if (value >= 1000000000) {
-                    return (value / 1000000000).toFixed(1) + ' TOPS'; // Convert to TOPS
-                } else if (value >= 1000000) {
-                    return (value / 1000000).toFixed(1) + ' GOPS'; // Convert to GOPS
+                if (value >= 1000000) {
+                    return (value / 1000000).toFixed(0) + ' TOPS'; // Convert to TOPS
+                } else if (value >= 1000) {
+                    return (value / 1000).toFixed(0) + ' GOPS'; // Convert to GOPS
                 }
-                return value.toFixed(1) + ' MOPS'; // Show as MOPS
+                return value.toFixed(0) + ' MOPS'; // Show as MOPS
             }
         }
     },
