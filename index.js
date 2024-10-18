@@ -292,15 +292,15 @@ option2 = {
             type: 'scatter',
             symbolSize: 13,
             data: [
-                [881.7, 51200, 58, "sample7"],
-                [1800, 981.72, 0.5454, "sample8"],
-                [1800, 981.7, 0.5454, "sample21"],
-                [94500, 22551500, 27, "sample22"],
-                [32000, 140000, 4.375, "sample27"],
-                [10.17, 92.14, 9.06, "sample43"],
-                [900, 478800, 532, "sample47"],
-                [170, 255, 1.5, "sample54"],
-                [200, 2660, 13.3, "sample66"]
+                [881.7, 51200, 58, "sample7", "https://ieeexplore.ieee.org/document/9061142"],
+                [1800, 981.72, 0.5454, "sample8", "https://ieeexplore.ieee.org/document/8835152"],
+                [1800, 981.7, 0.5454, "sample21", "https://ieeexplore.ieee.org/document/8839347"],
+                [94500, 22551500, 27, "sample22", "https://ieeexplore.ieee.org/document/8836114"],
+                [32000, 140000, 4.375, "sample27", "https://ieeexplore.ieee.org/document/7870271"],
+                [10.17, 92.14, 9.06, "sample43", "https://ieeexplore.ieee.org/document/8702698"],
+                [900, 478800, 532, "sample47", "https://ieeexplore.ieee.org/document/8480105"],
+                [170, 255, 1.5, "sample54", "https://ieeexplore.ieee.org/document/9293122"],
+                [200, 2660, 13.3, "sample66", "https://ieeexplore.ieee.org/document/8502266"]
             ],
             symbol: 'circle',
             visible: true
