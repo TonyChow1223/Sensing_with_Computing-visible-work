@@ -301,7 +301,8 @@ option2 = {
                 [900, 478800, 532, "sample47", "https://ieeexplore.ieee.org/document/8480105"],
                 [170, 255, 1.5, "sample54", "https://ieeexplore.ieee.org/document/9293122"],
                 [200, 2660, 13.3, "sample66", "https://ieeexplore.ieee.org/document/8502266"]
-            ],
+            ]
+            ,
 
             symbol: 'circle',
             visible: true
@@ -328,7 +329,8 @@ option2 = {
                 [379100, 1210000, 3.19, "sample55", "https://ieeexplore.ieee.org/document/9365965"],
                 [53.2, 193.9, 3.6, "sample57", "https://ieeexplore.ieee.org/document/9365839"],
                 [1230000, 658000, 0.535, "sample73", "https://ieeexplore.ieee.org/document/9010705"]
-            ],
+            ]
+            ,
 
             symbol: 'triangle',
             visible: true
