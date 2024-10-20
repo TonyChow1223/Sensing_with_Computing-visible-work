@@ -163,6 +163,7 @@ option1 = {
                     formatter: function (params) {
                         return  params.name;
                     },
+                    rotate:15,
                     position: 'end',
                     color: 'gray'
                 },
@@ -358,6 +359,7 @@ option2 = {
                     formatter: function (params) {
                         return params.name;
                     },
+                    rotate:15,
                     position: 'end',
                     color: 'gray'
                 },
@@ -378,10 +380,3 @@ option2 = {
         }
     ]
 };
-
-
-
-
-
-
-
