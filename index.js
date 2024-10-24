@@ -14,6 +14,10 @@ option1 = {
 
     tooltip: {
         showDelay: 0,
+        confine: true,
+        textStyle: {
+            fontSize: 12 // 调整字体大小
+        },
         formatter: function (params) {
             // 功率单位转换
             let power = params.value[0];
@@ -92,16 +96,17 @@ option1 = {
             type: 'scatter',
             symbolSize: 13,
             data: [
-                [16.43, 1939.456, 0.00847, "sample4", "https://ieeexplore.ieee.org/document/9449866"],
-                [620, 76.8, 8.073, "sample26","https://ieeexplore.ieee.org/document/8197364"],
-                [29.9, 491.52, 0.0608, "sample28","https://ieeexplore.ieee.org/document/6757366"],
-                [52500, 7680, 6.836, "sample44","https://ieeexplore.ieee.org/document/9119774"],
-                [229, 2313.13, 0.099, "sample46","https://ieeexplore.ieee.org/document/8844721"],
-                [620, 76.8, 8.1, "sample53","https://ieeexplore.ieee.org/document/7870354"],
-                [107000, 9727, 11, "sample64","https://ieeexplore.ieee.org/document/10143350"],
-                [760000, 62208, 12.21, "sample65","https://ieeexplore.ieee.org/document/8598832"],
-                [188388, 71089.92, 2.65, "sample67","https://ieeexplore.ieee.org/document/8662306"]
-            ],
+                [16.43, 1939.456, 0.00847, "NS-MD: Near-Sensor Motion Detection With Energy Harvesting Image Sensor for Always-On Visual Perception", "https://ieeexplore.ieee.org/document/9449866"],
+                [620, 76.8, 8.073, "A Low-Power Convolutional Neural Network Face Recognition Processor and a CIS Integrated With Always-on Face Detector", "https://ieeexplore.ieee.org/document/8197364"],
+                [29.9, 491.52, 0.0608, "7.2 243.3pJ/pixel bio-inspired time-stamp-based 2D optic flow sensor for artificial compound eyes", "https://ieeexplore.ieee.org/document/6757366"],
+                [52500, 7680, 6.836, "An On-Chip Binary-Weight Convolution CMOS Image Sensor for Neural Networks", "https://ieeexplore.ieee.org/document/9119774"],
+                [229, 2313.13, 0.099, "A Data-Compressive 1.5/2.75-bit Log-Gradient QVGA Image Sensor With Multi-Scale Readout for Always-On Object Detection", "https://ieeexplore.ieee.org/document/8844721"],
+                [620, 76.8, 8.1, "14.6 A 0.62mW ultra-low-power convolutional-neural-network face-recognition processor and a CIS integrated with always-on haar-like face detector", "https://ieeexplore.ieee.org/document/7870354"],
+                [107000, 9727, 11, "39 000-Subexposures/s Dual-ADC CMOS Image Sensor With Dual-Tap Coded-Exposure Pixels for Single-Shot HDR and 3-D Computational Imaging", "https://ieeexplore.ieee.org/document/10143350"],
+                [760000, 62208, 12.21, "A 1920 × 1080 25-Frames/s 2.4-TOPS/W Low-Power 6-D Vision Processor for Unified Optical Flow and Stereo Depth With Semi-Global Matching", "https://ieeexplore.ieee.org/document/8598832"],
+                [188388, 71089.92, 2.65, "5.2 Energy-Efficient Low-Noise CMOS Image Sensor with Capacitor Array-Assisted Charge-Injection SAR ADC for Motion-Triggered Low-Power IoT Applications", "https://ieeexplore.ieee.org/document/8662306"]
+            ]
+            ,
             symbol: 'circle',
             visible: true
         },
@@ -114,24 +119,24 @@ option1 = {
             },
             symbol: 'triangle',
             data: [
-                [134.5, 3969, 0.0338, "sample13","https://ieeexplore.ieee.org/document/10164007"],
-                [71.2, 1474.56, 0.0483, "sample14","https://ieeexplore.ieee.org/document/9425497"],
-                [77, 7864.32, 0.0098, "sample15","https://ieeexplore.ieee.org/document/9250500"],
-                [1400, 1545.87, 0.9056, "sample17","https://ieeexplore.ieee.org/document/7551398"],
-                [6200, 12288, 0.5046, "sample18","https://ieeexplore.ieee.org/document/10185291"],
-                [5300, 7864.32, 0.6739, "sample42","https://ieeexplore.ieee.org/document/9371913"],
-                [205000, 165888, 1.23, "sample56","https://ieeexplore.ieee.org/document/8662441"],
-                [111, 3276.8, 0.034, "sample58","https://ieeexplore.ieee.org/document/9365771"],
-                [5.7, 96, 0.059, "sample59","https://ieeexplore.ieee.org/document/9162854"],
-                [34400, 988.2, 34, "sample61","https://ieeexplore.ieee.org/document/8844261"],
-                [5750, 7864.32, 0.731, "sample62","https://ieeexplore.ieee.org/document/9684032"],
-                [34.4, 8847.36, 0.00388, "sample63","https://ieeexplore.ieee.org/document/7403939"],
-                [598600, 540000, 1.11, "sample69","https://ieeexplore.ieee.org/document/7870268"],
-                [612000, 1470873, 0.42, "sample70","https://ieeexplore.ieee.org/document/9180435"],
-                [75000, 20833, 3.6, "sample71","https://ieeexplore.ieee.org/document/6362241"],
-                [185000, 242457, 0.76, "sample72","https://ieeexplore.ieee.org/document/6487825"],
-                [31521, 1106, 28.5, "sample74","https://ieeexplore.ieee.org/document/9010705"],
-                [8560, 9216, 0.929, "sample75","https://ieeexplore.ieee.org/document/10067708"]
+                [134.5, 3969, 0.0338, "A 0.8 V Intelligent Vision Sensor With Tiny Convolutional Neural Network and Programmable Weights Using Mixed-Mode Processing-in-Sensor Technique for Image Classification", "https://ieeexplore.ieee.org/document/10164007"],
+                [71.2, 1474.56, 0.0483, "A 0.8 V Multimode Vision Sensor for Motion and Saliency Detection With Ping-Pong PWM Pixel", "https://ieeexplore.ieee.org/document/9425497"],
+                [77, 7864.32, 0.0098, "A 0.5-V Real-Time Computational CMOS Image Sensor With Programmable Kernel for Feature Extraction", "https://ieeexplore.ieee.org/document/9250500"],
+                [1400, 1545.87, 0.9056, "RedEye: Analog ConvNet Image Sensor Architecture for Continuous Mobile Vision", "https://ieeexplore.ieee.org/document/7551398"],
+                [6200, 12288, 0.5046, "A 3.96μm, 124dB Dynamic Range, 6.2mW Stacked Digital Pixel Sensor with Monochrome and Near-Infrared Dual-Channel Global Shutter Capture", "https://ieeexplore.ieee.org/document/10185291"],
+                [5300, 7864.32, 0.6739, "A 4.6μm, 512×512, Ultra-Low Power Stacked Digital Pixel Sensor with Triple Quantization and 127dB Dynamic Range", "https://ieeexplore.ieee.org/document/9371913"],
+                [205000, 165888, 1.23, "5.1 A Stacked Global-Shutter CMOS Imager with SC-Type Hybrid-GS Pixel and Self-Knee Point Calibration Single Frame HDR and On-Chip Binarization Algorithm for Smart Vision Applications", "https://ieeexplore.ieee.org/document/8662441"],
+                [111, 3276.8, 0.034, "34.2 A 21pJ/frame/pixel Imager and 34pJ/frame/pixel Image Processor for a Low-Vision Augmented-Reality Smart Contact Lens", "https://ieeexplore.ieee.org/document/9365771"],
+                [5.7, 96, 0.059, "A 3.0μW@5fps QQVGA Self-Controlled Wake-Up Imager with On-Chip Motion Detection, Auto-Exposure and Object Recognition", "https://ieeexplore.ieee.org/document/9162854"],
+                [34400, 988.2, 34, "Dual-Tap Computational Photography Image Sensor With Per-Pixel Piplined Digital Memory for Intra-Frame Coded Multi-Exposure", "https://ieeexplore.ieee.org/document/8844261"],
+                [5750, 7864.32, 0.731, "A 4.6-μm, 127-dB Dynamic Range, Ultra-Low Power Stacked Digital Pixel Sensor With Overlapped Triple Quantization", "https://ieeexplore.ieee.org/document/9684032"],
+                [34.4, 8847.36, 0.00388, "A 0.5 V, 14.28-kframes/s, 96.7-dB Smart Image Sensor With Array-Level Image Signal Processing for IoT Applications", "https://ieeexplore.ieee.org/document/7403939"],
+                [598600, 540000, 1.11, "4.6 A 1/2.3inch 20Mpixel 3-layer stacked CMOS Image Sensor with DRAM", "https://ieeexplore.ieee.org/document/7870268"],
+                [612000, 1470873, 0.42, "A Low-Power 65/14nm Stacked CMOS Image Sensor", "https://ieeexplore.ieee.org/document/9180435"],
+                [75000, 20833, 3.6, "CMOS-3D Smart Imager Architectures for Feature Detection", "https://ieeexplore.ieee.org/document/6362241"],
+                [185000, 242457, 0.76, "A 1/4-inch 8Mpixel back-illuminated stacked CMOS image sensor", "https://ieeexplore.ieee.org/document/6487825"],
+                [31521, 1106, 28.5, "A 30-fps 192 × 192 CMOS Image Sensor With Per-Frame Spatial-Temporal Coded Exposure for Compressive Focal-Stack Depth Sensing", "https://ieeexplore.ieee.org/document/9723459"],
+                [8560, 9216, 0.929, "Dual-Port CMOS Image Sensor with Regression-Based HDR Flux-to-Digital Conversion and 80ns Rapid-Update Pixel-Wise Exposure Coding", "https://ieeexplore.ieee.org/document/10067708"]
             ],
             symbol: 'triangle',
             visible: true
@@ -145,9 +150,9 @@ option1 = {
             },
             symbol: 'square',
             data: [
-                [1, 4.096, 0.2441, "sample24","https://dl.acm.org/doi/abs/10.1145/3489517.3530554"],
-                [17.4, 245.76, 0.0708, "sample25","https://ieeexplore.ieee.org/document/9789972"],
-                [23000, 5068.8, 4.5, "sample45","https://ieeexplore.ieee.org/document/7859309"]
+                [1, 4.096, 0.2441, "In-Situ Self-Powered Intelligent Vision System with Inference-Adaptive Energy Scheduling for BNN-Based Always-On Perception", "https://dl.acm.org/doi/abs/10.1145/3489517.3530554"],
+                [17.4, 245.76, 0.0708, "A Multimode CMOS Vision Sensor With On-Chip Motion Direction Detection and Simultaneous Energy Harvesting Capabilities", "https://ieeexplore.ieee.org/document/9789972"],
+                [23000, 5068.8, 4.5, "A 23-mW Face Recognition Processor with Mostly-Read 5T Memory in 40-nm CMOS", "https://ieeexplore.ieee.org/document/7859309"]
             ],
             visible: true
         },
@@ -200,6 +205,11 @@ option2 = {
 
     tooltip: {
         showDelay: 0,
+        confine: false,
+        position: 'left',
+        textStyle: {
+            fontSize: 12 // 调整字体大小
+        },
         formatter: function (params) {
             // 功耗转换
 
@@ -295,15 +305,14 @@ option2 = {
             type: 'scatter',
             symbolSize: 13,
             data: [
-                [881.7, 51200, 58, "sample7", "https://ieeexplore.ieee.org/document/9061142"],
-                [1800, 981.72, 0.5454, "sample8", "https://ieeexplore.ieee.org/document/8835152"],
-                [1800, 981.7, 0.5454, "sample21", "https://ieeexplore.ieee.org/document/8839347"],
-                [94500, 22551500, 27, "sample22", "https://ieeexplore.ieee.org/document/8836114"],
-                [32000, 140000, 4.375, "sample27", "https://ieeexplore.ieee.org/document/7870271"],
-                [10.17, 92.14, 9.06, "sample43", "https://ieeexplore.ieee.org/document/8702698"],
-                [900, 478800, 532, "sample47", "https://ieeexplore.ieee.org/document/8480105"],
-                [170, 255, 1.5, "sample54", "https://ieeexplore.ieee.org/document/9293122"],
-                [200, 2660, 13.3, "sample66", "https://ieeexplore.ieee.org/document/8502266"]
+                [881.7, 51200, 58, "NS-CIM: A Current-Mode Computation-in-Memory Architecture Enabling Near-Sensor Processing for Intelligent IoT Vision Nodes", "https://ieeexplore.ieee.org/document/9061142"],
+                [1800, 981.72, 0.5454, "Processing Near Sensor Architecture in Mixed-Signal Domain With CMOS Image Sensor of Convolutional-Kernel-Readout Method", "https://ieeexplore.ieee.org/document/8835152"],
+                [94500, 22551500, 27, "ASP-SIFT: Using Analog Signal Processing Architecture to Accelerate Keypoint Detection of SIFT Algorithm", "https://ieeexplore.ieee.org/document/8836114"],
+                [32000, 140000, 4.375, "A 1ms high-speed vision chip with 3D-stacked 140GOPS column-parallel PEs for spatio-temporal image processing", "https://ieeexplore.ieee.org/document/7870271"],
+                [10.17, 92.14, 9.06, "An Ultra-Low-Power Analog-Digital Hybrid CNN Face Recognition Processor Integrated with a CIS for Always-on Mobile Devices", "https://ieeexplore.ieee.org/document/8702698"],
+                [900, 478800, 532, "An Always-On 3.8 uJ/86% CIFAR-10 Mixed-Signal Binary CNN Processor With All Memory on Chip in 28-nm CMOS", "https://ieeexplore.ieee.org/document/8480105"],
+                [170, 255, 1.5, "An Ultra-Low-Power Image Signal Processor for Hierarchical Image Recognition With Deep Neural Networks", "https://ieeexplore.ieee.org/document/9293122"],
+                [200, 2660, 13.3, "B-Face: 0.2 MW CNN-Based Face Recognition Processor with Face Alignment for Mobile User Identification", "https://ieeexplore.ieee.org/document/8502266"]
             ],
             symbol: 'circle',
             visible: true
@@ -317,19 +326,19 @@ option2 = {
             },
             symbol: 'triangle',
             data: [
-                [2.17, 24.93, 11.49, "sample1", "https://ieeexplore.ieee.org/document/9712591"],
-                [0.147, 2.543, 17.3, "sample2", "https://ieeexplore.ieee.org/document/9464962"],
-                [2.14, 14.74, 6.89, "sample3", "https://ieeexplore.ieee.org/document/9634759"],
-                [12.16, 16.05, 1.32, "sample5", "https://ieeexplore.ieee.org/document/9164893"],
-                [4.45, 51.13, 11.49, "sample6", "https://ieeexplore.ieee.org/document/9218622"],
-                [60800, 4.55e9, 7.48e4, "sample9", "https://www.nature.com/articles/s41586-023-06558-8#Abs1"],
-                [1230000, 655000, 0.5325, "sample12", "https://ieeexplore.ieee.org/document/6578654"],
-                [26200, 20000, 0.7634, "sample16", "https://ieeexplore.ieee.org/document/4982878"],
-                [5.9, 48.56, 8.23, "sample19", "https://ieeexplore.ieee.org/document/9401338"],
-                [6500, 65000, 10, "sample29", "https://ieeexplore.ieee.org/document/7870353"],
-                [379100, 1210000, 3.19, "sample55", "https://ieeexplore.ieee.org/document/9365965"],
-                [53.2, 193.9, 3.6, "sample57", "https://ieeexplore.ieee.org/document/9365839"],
-                [1230000, 658000, 0.535, "sample73", "https://ieeexplore.ieee.org/document/9010705"]
+                [2.17, 24.93, 11.49, "A 2.17μW@120fps Ultra-Low-Power Dual-Mode CMOS Image Sensor with Senputing Architecture", "https://ieeexplore.ieee.org/document/9712591"],
+                [0.147, 2.543, 17.3, "Senputing: An Ultra-Low-Power Always-On Vision Perception Chip Featuring the Deep Fusion of Sensing and Computing", "https://ieeexplore.ieee.org/document/9464962"],
+                [2.14, 14.74, 6.89, "A 4.57 μW@120fps Vision System of Sensing with Computing for BNN-Based Perception Applications", "https://ieeexplore.ieee.org/document/9634759"],
+                [12.16, 16.05, 1.32, "MACSen: A Processing-In-Sensor Architecture Integrating MAC Operations Into Image Sensor for Ultra-Low-Power BNN-Based Intelligent Visual Perception", "https://ieeexplore.ieee.org/document/9164893"],
+                [4.45, 51.13, 11.49, "Utilizing Direct Photocurrent Computation and 2D Kernel Scheduling to Improve In-Sensor-Processing Efficiency", "https://ieeexplore.ieee.org/document/9218622"],
+                [60800, 4550000000, 7.48*10^4, "All-analog photoelectronic chip for high-speed vision tasks", "https://www.nature.com/articles/s41586-023-06558-8#Abs1"],
+                [1230000, 655000, 0.5325, "A 100,000 fps Vision Sensor with Embedded 535GOPS/W 256x256 SIMD Processor Array", "https://ieeexplore.ieee.org/document/6578654"],
+                [26200, 20000, 0.7634, "Focal-Plane Algorithmically-Multiplying CMOS Computational Image Sensor", "https://ieeexplore.ieee.org/document/4982878"],
+                [5.9, 48.56, 8.23, "A 5.9μW Ultra-Low-Power Dual-Resolution CIS Chip of Sensing-with-Computing for Always-on Intelligent Visual Devices", "https://ieeexplore.ieee.org/document/9401338"],
+                [6500, 65000, 10, "14.5 Envision: A 0.26-to-10TOPS/W subword-parallel dynamic-voltage-accuracy-frequency-scalable Convolutional Neural Network processor in 28nm FDSOI", "https://ieeexplore.ieee.org/document/7870353"],
+                [379100, 1210000, 3.19, "A 1/2.3inch 12.3Mpixel with On-Chip 4.97TOPS/W CNN Processor Back-Illuminated Stacked CMOS Image Sensor", "https://ieeexplore.ieee.org/document/9365965"],
+                [53.2, 193.9, 3.6, "A 0.2-to-3.6TOPS/W Programmable Convolutional Imager SoC with In-Sensor Current-Domain Ternary-Weighted MAC Operations", "https://ieeexplore.ieee.org/document/9365839"],
+                [1230000, 658000, 0.535, "A Camera That CNNs: Towards Embedded Neural Networks on Pixel Processor Arrays", "https://ieeexplore.ieee.org/document/9010705"]
             ],
             symbol: 'triangle',
             visible: true
@@ -342,8 +351,8 @@ option2 = {
                 color: 'black'
             },
             symbol: 'square',
-            data: [
-                [225000, 1600000, 7.1, "sample68", "https://ieeexplore.ieee.org/document/10213232"]
+            data:[
+                [225000, 1600000, 7.1, "H3DAtten: Heterogeneous 3-D Integrated Hybrid Analog and Digital Compute-in-Memory Accelerator for Vision Transformer Self-Attention", "https://ieeexplore.ieee.org/document/10213232"]
             ],
             visible: true
         },
