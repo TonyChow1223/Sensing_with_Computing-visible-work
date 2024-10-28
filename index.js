@@ -343,7 +343,8 @@ option2 = {
                 [379100, 1210000, 3.19, "A 1/2.3inch 12.3Mpixel with On-Chip 4.97TOPS/W CNN Processor Back-Illuminated Stacked CMOS Image Sensor", "https://ieeexplore.ieee.org/document/9365965", "65nm top chip/22nm bottom chip"],
                 [53.2, 193.9, 3.6, "A 0.2-to-3.6TOPS/W Programmable Convolutional Imager SoC with In-Sensor Current-Domain Ternary-Weighted MAC Operations for Feature Extraction and Region-of-Interest Detection", "https://ieeexplore.ieee.org/document/9365839", "65nm"],
                 [1230000, 658000, 0.535, "A Camera That CNNs: Towards Embedded Neural Networks on Pixel Processor Arrays", "https://ieeexplore.ieee.org/document/9010705", "N/A"]
-            ],
+            ]
+            ,
             symbol: 'triangle',
             visible: true
         },
