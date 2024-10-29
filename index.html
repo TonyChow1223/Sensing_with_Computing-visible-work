@@ -27,30 +27,28 @@
 <body style="padding: 20px">
 <div class="mdui-container">
 
-
     <div id="header" style="text-align: center">
         <h2 class="title">
             智能感知可视化
         </h2>
         <h4>
-           // 作者 //
+            // 作者 //
         </h4>
     </div>
 
     <hr />
 
     <div class="mdui-row">
-        <div class="mdui-col-md-6 mdui-col-xs-12">
+        <div class="mdui-col-xs-12">
             <div id="graph-1" class="graph"></div>
         </div>
-        <div class="mdui-col-md-6 mdui-col-xs-12">
+        <div class="mdui-col-xs-12">
             <div id="graph-2" class="graph"></div>
         </div>
     </div>
 </div>
 
-
-<footer style="margin-top: 20px;padding: 5px;">
+<footer style="margin-top: 20px; padding: 5px;">
     <hr />
     <div class="tag">
         <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" width="20px" />
@@ -69,24 +67,19 @@
         }
     });
 
-
     const graph2 = echarts.init(document.getElementById('graph-2'));
     graph2.setOption(option2);
     graph2.on('click', function (params) {
-        // 检查点击的数据是否有链接
         const dataPoint = params.data;
         if (dataPoint && dataPoint[4]) {
-            // 跳转到指定链接
             window.open(dataPoint[4]);
         }
     });
-
 
     window.onresize = function() {
         graph1.resize();
         graph2.resize();
     };
-
 </script>
 
 </body>
