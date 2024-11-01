@@ -21,19 +21,18 @@
         gap: 5px;
         align-items: center;
     }
-
 </style>
 <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css">
 <body style="padding: 20px">
 <div class="mdui-container">
 
     <div id="header" style="text-align: center">
-        <h2 class="title">
-            智能感知可视化
-        </h2>
-        <h4>
-            // 作者 //
-        </h4>
+        <h2 class="title">智能感知可视化</h2>
+        <h4>// 作者 //</h4>
+        <select id="chart-selector" onchange="updateChart()">
+            <option value="1">Using pixel/s as speed metric</option>
+            <option value="2">Using OPS as speed metric</option>
+        </select>
     </div>
 
     <hr />
@@ -55,32 +54,30 @@
         Github
     </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="./index.js"></script>
 <script>
-    const graph1 = echarts.init(document.getElementById('graph-1'));
-    graph1.setOption(option1);
-    graph1.on('click', function (params) {
-        const dataPoint = params.data;
-        if (dataPoint && dataPoint[4]) {
-            window.open(dataPoint[4]);
-        }
-    });
-
-    const graph2 = echarts.init(document.getElementById('graph-2'));
-    graph2.setOption(option2);
-    graph2.on('click', function (params) {
-        const dataPoint = params.data;
-        if (dataPoint && dataPoint[4]) {
-            window.open(dataPoint[4]);
-        }
-    });
-
+    // 大小适配
     window.onresize = function() {
         graph1.resize();
         graph2.resize();
     };
-</script>
 
+    // 在图表初始化后隐藏第二个图表
+    document.getElementById("graph-2").style.display = "none";
+
+    function updateChart() {
+        const selectedOption = document.getElementById("chart-selector").value;
+        if (selectedOption === "1") {
+            document.getElementById("graph-1").style.display = "block";
+            document.getElementById("graph-2").style.display = "none";
+        } else if (selectedOption === "2") {
+            document.getElementById("graph-1").style.display = "none";
+            document.getElementById("graph-2").style.display = "block";
+        }
+    }
+
+    // 以下为现有的图表配置和数据处理代码
+</script>
 </body>
 </html>
