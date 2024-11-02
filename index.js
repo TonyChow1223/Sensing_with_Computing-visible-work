@@ -335,7 +335,7 @@ option2 = {
     ]
 };
 
-//从JSON中抓数据
+// 从JSON中抓数据
 fetch("./data.json")
     .then((response) => {
         if (!response.ok) {
@@ -351,7 +351,15 @@ fetch("./data.json")
                 (series) => series.name === item.category
             );
             if (series) {
-                series.data.push(item.values);
+                // 这里将数据推送为数组形式 [power, Speed, Energy eff., Name, Links, Fabrication]
+                series.data.push([
+                    item.power,                // power
+                    item.Speed,                // Speed
+                    item['Energy eff.'],       // Energy efficiency
+                    item.Name,                 // Name
+                    item.Links,                // Links
+                    item.Fabrication           // Fabrication
+                ]);
             }
         });
 
@@ -365,12 +373,12 @@ fetch("./data.json")
         console.error("Error loading data:", error);
     });
 
-//点击跳转到文献链接
+// 点击跳转到文献链接
 const graph1 = echarts.init(document.getElementById('graph-1'));
 graph1.setOption(option1);
 graph1.on('click', function (params) {
     const dataPoint = params.data;
-    if (dataPoint && dataPoint[4]) {
+    if (dataPoint && dataPoint[4]) {  // dataPoint[4] 是链接
         window.open(dataPoint[4]);
     }
 });
@@ -379,7 +387,7 @@ const graph2 = echarts.init(document.getElementById('graph-2'));
 graph2.setOption(option2);
 graph2.on('click', function (params) {
     const dataPoint = params.data;
-    if (dataPoint && dataPoint[4]) {
+    if (dataPoint && dataPoint[4]) {  // dataPoint[4] 是链接
         window.open(dataPoint[4]);
     }
 });
