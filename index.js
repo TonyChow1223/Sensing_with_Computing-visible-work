@@ -14,10 +14,43 @@ option1 = {
 
     tooltip: {
         showDelay: 0,
-        confine: true,
+        confine: true,  // 确保 tooltip 不超出图表容器
         textStyle: {
-            fontSize: 12 // 调整字体大小
+            fontSize: 12,
         },
+        position: function (point, params, dom, rect, size) {
+            // 当前鼠标位置
+            var x = point[0];
+            var y = point[1];
+
+            // 图表的宽高
+            var viewWidth = size.viewSize[0];
+            var viewHeight = size.viewSize[1];
+
+            // tooltip 的宽高
+            var boxWidth = size.contentSize[0];
+            var boxHeight = size.contentSize[1];
+
+            // 如果 tooltip 超出右边界，则调整 x 位置
+            if (x + boxWidth > viewWidth) {
+                x = viewWidth - boxWidth - 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出左边界，则调整 x 位置
+            if (x < 0) {
+                x = 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出下边界，则调整 y 位置
+            if (y + boxHeight > viewHeight) {
+                y = viewHeight - boxHeight - 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出上边界，则调整 y 位置
+            if (y < 0) {
+                y = 10; // 留出 10px 的边距
+            }
+
+            return [x, y];
+        },
+
         formatter: function (params) {
             // 功率单位转换
             let power = params.value[0];
@@ -173,11 +206,43 @@ option2 = {
 
     tooltip: {
         showDelay: 0,
-        confine: false,
-        position: 'left',
+        confine: true,  // 确保 tooltip 不超出图表容器
         textStyle: {
-            fontSize: 12 // 调整字体大小
+            fontSize: 12,
         },
+        position: function (point, params, dom, rect, size) {
+            // 当前鼠标位置
+            var x = point[0];
+            var y = point[1];
+
+            // 图表的宽高
+            var viewWidth = size.viewSize[0];
+            var viewHeight = size.viewSize[1];
+
+            // tooltip 的宽高
+            var boxWidth = size.contentSize[0];
+            var boxHeight = size.contentSize[1];
+
+            // 如果 tooltip 超出右边界，则调整 x 位置
+            if (x + boxWidth > viewWidth) {
+                x = viewWidth - boxWidth - 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出左边界，则调整 x 位置
+            if (x < 0) {
+                x = 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出下边界，则调整 y 位置
+            if (y + boxHeight > viewHeight) {
+                y = viewHeight - boxHeight - 10; // 留出 10px 的边距
+            }
+            // 如果 tooltip 超出上边界，则调整 y 位置
+            if (y < 0) {
+                y = 10; // 留出 10px 的边距
+            }
+
+            return [x, y];
+        },
+
         formatter: function (params) {
             // 功耗转换
 
