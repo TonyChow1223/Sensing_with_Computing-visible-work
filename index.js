@@ -55,12 +55,15 @@ option1 = {
             // 功率单位转换
             let power = params.value[0];
             let formattedPower = '';
+
             if (power >= 1000000) {
-                formattedPower = (power / 1000000).toFixed(2) + ' W';
+                formattedPower = (power / 1000000).toFixed(2) + ' W'; // 转换为瓦特
             } else if (power >= 1000) {
-                formattedPower = (power / 1000).toFixed(2) + ' mW';
+                formattedPower = (power / 1000).toFixed(2) + ' mW'; // 转换为毫瓦特
+            } else if (power >= 0.001) {
+                formattedPower = power.toFixed(2) + ' µW'; // 转换为微瓦特
             } else {
-                formattedPower = power.toFixed(2) + ' uW';
+                formattedPower = (power * 1000).toFixed(2) + ' nW'; // 转换为纳瓦特
             }
 
             if (params.seriesName === 'FoM Lines') {
@@ -80,6 +83,7 @@ option1 = {
             );
         },
 
+
         axisPointer: {
             show: true,
             type: 'cross',
@@ -93,17 +97,19 @@ option1 = {
     xAxis: {
         type: 'log',
         name: 'Power',
-        min: 1,
+        min: 0.001,  // 将最小值扩展到 1 nW (0.001 µW)
         max: 1000000,
         axisLabel: {
             formatter: function (value) {
                 // 功率单位转换
                 if (value >= 1000000) {
-                    return (value / 1000000) + ' W';  // 将1000000 uW转换为1 W
+                    return (value / 1000000) + ' W';
                 } else if (value >= 1000) {
-                    return (value / 1000) + ' mW';    // 将1000 uW转换为1 mW
+                    return (value / 1000) + ' mW';
+                } else if (value >= 1) {
+                    return value + ' µW';
                 } else {
-                    return value + ' uW';             // 小于1000时保持单位为uW
+                    return (value * 1000) + ' nW';  // 小于1 µW时显示为nW
                 }
             }
         }
@@ -181,9 +187,9 @@ option1 = {
                     [{ coord: [100, 1], symbol: 'none' }, { coord: [1000000, 10000], symbol: 'none', name: '100 nJ/pixel' }],
                     [{ coord: [10, 1], symbol: 'none' }, { coord: [1000000, 100000], symbol: 'none', name: '10 nJ/pixel' }],
                     [{ coord: [1, 1], symbol: 'none' }, { coord: [1000000, 1000000], symbol: 'none', name: '1 nJ/pixel' }],
-                    [{ coord: [1, 10], symbol: 'none' }, { coord: [1000000, 10000000], symbol: 'none', name: '0.1 nJ/pixel' }],
-                    [{ coord: [1, 100], symbol: 'none' }, { coord: [100000, 10000000], symbol: 'none', name: '0.01 nJ/pixel' }],
-                    [{ coord: [1, 1000], symbol: 'none' }, { coord: [10000, 10000000], symbol: 'none', name: '0.001 nJ/pixel' }]
+                    [{ coord: [0.1, 1], symbol: 'none' }, { coord: [1000000, 10000000], symbol: 'none', name: '0.1 nJ/pixel' }],
+                    [{ coord: [0.01, 1], symbol: 'none' }, { coord: [100000, 10000000], symbol: 'none', name: '0.01 nJ/pixel' }],
+                    [{ coord: [0.001, 1], symbol: 'none' }, { coord: [10000, 10000000], symbol: 'none', name: '0.001 nJ/pixel' }]
                 ]
             }
         }
@@ -256,6 +262,10 @@ option2 = {
                 power /= 1000;
                 powerUnit = 'W';
             }
+            if (power < 1) {
+                power *=1000;
+                powerUnit = 'nW';
+            }
 
             // 速度转换
             let speed = params.value[1];
@@ -295,18 +305,18 @@ option2 = {
     xAxis: {
         type: 'log',
         name: 'Power (Watt)',
-        min: 0.1,
-        max: 10000000,
+        min: 0.001,
+        max: 5000000,
         axisLabel: {
             formatter: function (value) {
                 if (value >= 1000000) {
                     return (value / 1000000).toFixed(0) + ' W'; // Convert to W
                 } else if (value >= 1000) {
                     return (value / 1000).toFixed(0) + ' mW'; // Convert to mW
-                } else if (value <= 0.1) {
-                    return (value ).toFixed(1) + ' uW'; // Show 0.1 uW
-                }
-                return value.toFixed(0) + ' uW'; // Show as uW
+                } else if (value >= 1) {
+                    return (value).toFixed(0) + ' uW'; // Show uW
+                } else
+                return (value*1000).toFixed(0) + ' nW'; // Show as uW
             }
         }
     },
@@ -387,13 +397,13 @@ option2 = {
                     color: 'gray'
                 },
                 data: [
-                    [{ coord: [100, 1], symbol: 'none' }, { coord: [10000000, 100000], symbol: 'none', name: '0.01 TOPS/W' }],
-                    [{ coord: [10, 1], symbol: 'none' }, { coord: [10000000, 1000000], symbol: 'none', name: '0.1 TOPS/W' }],
-                    [{ coord: [1, 1], symbol: 'none' }, { coord: [10000000, 10000000], symbol: 'none', name: '1 TOPS/W' }],
-                    [{ coord: [0.1, 1], symbol: 'none' }, { coord: [10000000, 100000000], symbol: 'none', name: '10 TOPS/W' }],
-                    [{ coord: [0.1, 10], symbol: 'none' }, { coord: [10000000, 1000000000], symbol: 'none', name: '100 TOPS/W' }],
-                    [{ coord: [0.1, 100], symbol: 'none' }, { coord: [5000000, 5000000000], symbol: 'none', name: '1k TOPS/W' }],
-                    [{ coord: [0.1, 1000], symbol: 'none' }, { coord: [500000, 5000000000], symbol: 'none', name: '10k TOPS/W' }],
+                    [{ coord: [100, 1], symbol: 'none' }, { coord: [5000000, 50000], symbol: 'none', name: '0.01 TOPS/W' }],
+                    [{ coord: [10, 1], symbol: 'none' }, { coord: [5000000, 500000], symbol: 'none', name: '0.1 TOPS/W' }],
+                    [{ coord: [1, 1], symbol: 'none' }, { coord: [5000000, 5000000], symbol: 'none', name: '1 TOPS/W' }],
+                    [{ coord: [0.1, 1], symbol: 'none' }, { coord: [5000000, 50000000], symbol: 'none', name: '10 TOPS/W' }],
+                    [{ coord: [0.01, 1], symbol: 'none' }, { coord: [5000000, 500000000], symbol: 'none', name: '100 TOPS/W' }],
+                    [{ coord: [0.001, 1], symbol: 'none' }, { coord: [5000000, 5000000000], symbol: 'none', name: '1k TOPS/W' }],
+                    [{ coord: [0.001, 10], symbol: 'none' }, { coord: [500000, 5000000000], symbol: 'none', name: '10k TOPS/W' }],
                 ]
             }
         }
