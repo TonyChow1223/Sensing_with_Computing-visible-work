@@ -83,21 +83,12 @@ option1 = {
             );
         },
 
-
-        axisPointer: {
-            show: true,
-            type: 'cross',
-            lineStyle: {
-                type: 'dashed',
-                width: 1
-            }
-        }
     },
 
     xAxis: {
         type: 'log',
         name: 'Power',
-        min: 0.001,  // 将最小值扩展到 1 nW (0.001 µW)
+        min: 0.000999,  // 将最小值扩展到 1 nW (0.001 µW)
         max: 1000000,
         axisLabel: {
             formatter: function (value) {
@@ -108,7 +99,7 @@ option1 = {
                     return (value / 1000) + ' mW';
                 } else if (value >= 1) {
                     return value + ' µW';
-                } else {
+                } else if(value >=0.001){
                     return (value * 1000) + ' nW';  // 小于1 µW时显示为nW
                 }
             }
@@ -292,14 +283,6 @@ option2 = {
             );
         },
 
-        axisPointer: {
-            show: true,
-            type: 'cross',
-            lineStyle: {
-                type: 'dashed',
-                width: 1
-            }
-        }
     },
 
     xAxis: {
