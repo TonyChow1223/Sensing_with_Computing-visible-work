@@ -529,6 +529,16 @@
       "Name": "H3DAtten: Heterogeneous 3-D Integrated Hybrid Analog and Digital Compute-in-Memory Accelerator for Vision Transformer Self-Attention",
       "Links": "https://ieeexplore.ieee.org/document/10213232",
       "Fabrication": "40 nm"
+    },
+     {
+      "option": 1,
+      "category": "Unknown",
+      "power": 0.01,
+      "Speed": 10,
+      "Energy eff.": 0.001,
+      "Name": "Test",
+      "Links": "",
+      "Fabrication": "10 nm"
     }
   ]
 }
